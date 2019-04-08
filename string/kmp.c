@@ -10,7 +10,7 @@ int main() {
   char T[] = "XYXZXYXXYXYZXYZZZXYXYZZZXYZ";
   char P[] = "XYZZZXYZ";
 
-  printf("%d\n", kmp_match_count(T, P));
+  printf("count: %d\n", kmp_match_count(T, P));
 }
 
 int kmp_match(char T[], char P[]) {
@@ -69,6 +69,7 @@ int kmp_match_count(char T[], char P[]) {
       else
         i++;
     }
+
   }
 
   free(fail);
@@ -92,7 +93,7 @@ int* kmp_failure(char pattern[]) {
       if (j != 0) { 
         j = failure[j - 1]; 
       } 
-      else // if (len == 0) 
+      else 
       { 
         failure[i] = 0; 
         i++; 
