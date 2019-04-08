@@ -66,6 +66,7 @@ int boyer_moore_count(char T[], char P[], char sigma[]) {
   int count = 0;
 
   for (int k = 0; k < T_length; k++) {
+    count++;
     if (T[i] == P[j]) {
       if (j == 0) {
         free(last);
@@ -93,7 +94,6 @@ int boyer_moore_count(char T[], char P[], char sigma[]) {
       i = i + P_length - temp;
       j = P_length - 1;
     }
-    count++;
   }
 
   free(last);
