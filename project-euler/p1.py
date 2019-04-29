@@ -1,10 +1,10 @@
 def findSum():
-  sum = 0
+  ans = 0
   for i in range(5, 1000):
     if i % 3 == 0 or i % 5 == 0:
-      sum += i
+      ans += i
 
-  return sum
+  return ans
 
 if __name__ == "__main__":
   print(findSum())
